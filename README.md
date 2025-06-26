@@ -22,7 +22,7 @@ Cloud Parking é uma aplicação Spring Boot desenvolvida para fins de estudo, f
 
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu-usuario/cloud-parking.git
+   git clone https://github.com/Adilson-R-Martins/cloud-parking.git
    cd cloud-parking
    ```
 
