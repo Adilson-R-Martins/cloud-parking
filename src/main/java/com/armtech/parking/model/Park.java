@@ -1,9 +1,14 @@
 package com.armtech.parking.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
 import java.time.LocalDateTime;
 
+@Entity
 public class Park {
 
+    @Id
     private String id;
     private String license;
     private String state;

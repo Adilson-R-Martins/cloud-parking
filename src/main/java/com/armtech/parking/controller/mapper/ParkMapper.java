@@ -13,11 +13,19 @@ public class ParkMapper {
 
     private static final ModelMapper MODEL_MAPPER = new ModelMapper();
 
-    private ParkDTO parkDTO(Park park){
+    public ParkDTO toParkDTO(Park park) {
         return MODEL_MAPPER.map(park, ParkDTO.class);
-    };
+    }
 
     public List<ParkDTO> toParkDTOList(List<Park> parkList) {
-        return parkList.stream().map(this::parkDTO).collect(Collectors.toList());
+        return parkList.stream().map(this::toParkDTO).collect(Collectors.toList());
+    }
+
+    public Park toPark(ParkDTO dto) {
+        return MODEL_MAPPER.map(dto, Park.class);
+    }
+
+    public Park toParkCreate(ParkDTO dto) {
+        return MODEL_MAPPER.map(dto, Park.class);
     }
 }
